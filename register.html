@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2712%27 fill=%27%23D9482B%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css"><title>Create account · Nura</title></head>
+<body><div class="shell">
+  <aside class="aside">
+    <div class="brand"><i></i>Nura</div>
+    <div style="position:relative;z-index:1">
+      <h1>Start <em>here.</em></h1><p>One account, three stores — each holding only what it is best at.</p>
+      <ul class="ledger" aria-label="How your data is stored">
+        <li><span>MySQL</span><b>credentials</b></li>
+        <li><span>MongoDB</span><b>profile</b></li>
+        <li><span>Redis</span><b>session · 24h</b></li>
+      </ul>
+    </div>
+    <span></span>
+  </aside>
+  <main class="main"><div class="panel wide">
+    <p class="eyebrow">Create account</p>
+    <h2>Let's get you set up.</h2>
+    <p class="lede">Account details first. Profile details are optional and can be edited later.</p>
+    <div id="alert" class="alert" aria-live="polite"></div>
+    <form id="registerForm" novalidate>
+      <div class="row2">
+        <div class="field"><label for="username">Username</label><input id="username" autocomplete="username" minlength="3" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="email" required></div>
+      </div>
+      <div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="new-password" required>
+        <button type="button" class="reveal" data-for="password" aria-pressed="false">Show</button>
+        <div class="meter" data-s="0" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <ul class="rules"><li data-rule="len">8+ characters</li><li data-rule="upper">Uppercase</li><li data-rule="num">Number</li><li data-rule="sym">Symbol (bonus)</li></ul>
+      </div>
+      <div class="divider">About you · optional</div>
+      <div class="row2">
+        <div class="field"><label for="name">Full name</label><input id="name" autocomplete="name"></div>
+        <div class="field"><label for="age">Age</label><input id="age" type="number" min="13" max="120"></div>
+      </div>
+      <div class="field"><label for="bio">Bio</label><textarea id="bio" rows="2" placeholder="A line or two about you"></textarea></div>
+      <div class="field"><label for="interests">Interests</label><input id="interests" placeholder="music, hiking, chess"><div class="hint">Comma-separated.</div></div>
+      <button id="submit" class="btn" type="submit"><span class="spin"></span>Create account</button>
+    </form>
+    <p class="switch">Already registered? <a href="index.html">Sign in</a></p>
+  </div></main>
+</div><script type="module" src="js/register.js"></script></body></html>

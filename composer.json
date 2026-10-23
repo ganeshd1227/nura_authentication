@@ -1,0 +1,12 @@
+{
+    "name": "nishmi/nura-auth-assignment",
+    "description": "Authentication system assignment for Nura AI Labs",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "ext-mysqli": "*",
+        "mongodb/mongodb": "^2.5",
+        "predis/predis": "^2.3",
+        "vlucas/phpdotenv": "^5.7"
+    }
+}

@@ -1,0 +1,32 @@
+# Render Blueprint — New → Blueprint → select this repo.
+services:
+  - type: web
+    name: nura-auth
+    runtime: docker
+    plan: free
+    healthCheckPath: /index.html
+    envVars:
+      - key: MYSQL_HOST
+        sync: false
+      - key: MYSQL_PORT
+        value: "3306"
+      - key: MYSQL_USER
+        sync: false
+      - key: MYSQL_PASSWORD
+        sync: false
+      - key: MYSQL_DATABASE
+        value: authentication
+      - key: MYSQL_SSL
+        value: "true"
+      - key: MONGO_URI
+        sync: false
+      - key: MONGO_DATABASE
+        value: authentication
+      - key: REDIS_HOST
+        sync: false
+      - key: REDIS_PORT
+        value: "6379"
+      - key: REDIS_PASSWORD
+        sync: false
+      - key: REDIS_SCHEME
+        value: tls
